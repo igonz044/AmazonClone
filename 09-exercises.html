@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09 Exercises</title>
+</head>
+<body>
+    <button class="js-button1" onclick="a();">9a</button>
+    <button class="js-button2" onclick="b();">9b</button>
+    <hr>
+    <input class="js-input1"  onkeydown="c(event);" placeholder="Name">
+    <button class="js-submit" onclick="d();">Submit</button>
+    <p class="js-name"></p>
+
+    <input placeholder="Type something" class="js-input"
+      onkeyup="
+        const inputElement = document.querySelector('.js-input').value;
+        document.querySelector('.js-message').innerHTML = inputElement;
+      ">
+
+    <p class="js-message"></p>
+
+    <script>
+        function a(){
+            console.log(document.querySelector('.js-button1'));
+        }
+        function b(){
+            document.querySelector('.js-button2').innerHTML = "Done!"; 
+        }
+        function c(event){
+            if(event.key==='Enter'){
+                d();
+            }
+        }
+        function d(){
+            let name = document.querySelector('.js-input1').value;
+            document.querySelector('.js-name').innerHTML = name;
+        }
+    </script>
+</body>
+</html>
