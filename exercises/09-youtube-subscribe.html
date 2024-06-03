@@ -3,6 +3,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Youtube</title>
+    <style>
+    body {
+        font-family: Arial;
+    }
+    .gray {
+        background-color: pink;
+    }
+    .black {
+        background-color: black;
+    }
+    
+    </style>
 </head>
 <body>
     <p>Youtube Subscribe Button</p>
@@ -13,8 +25,11 @@
         const buttonElement = document.querySelector('.js-subscribe-button');
         if (buttonElement.innerHTML === 'Subscribe') {
             buttonElement.innerHTML = 'Subscribed';
-        }else {
+            // no dot needed for class name as in query selector
+            buttonElement.classList.add("gray"); 
+        }else {                                                                                                            
             buttonElement.innerHTML = 'Subscribe';
+            buttonElement.classList.remove("gray");
         }
     }
     

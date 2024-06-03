@@ -1,0 +1,39 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>isToggled</title>
+    <style>
+        .is-toggled {
+            background-color: red;
+        }
+    </style>
+    
+</head>
+<body>
+    <button class="js1 is-toggled" onclick="toggled('.js1');">Gaming</button>
+    <button class="js2 is-toggled" onclick="toggled('.js2');">Music</button>
+    <button class="js3 is-toggled" onclick="toggled('.js3');">Tech</button>
+    <script>
+        function toggled(n){
+            
+            let element = document.querySelector(n);
+
+            
+            
+            if(element.classList.contains("is-toggled")){
+                element.classList.remove("is-toggled");
+            }
+            else {
+                let prevbutton = document.querySelector('.is-toggled');
+                if(prevbutton){
+                    prevbutton.classList.remove('is-toggled');
+                }
+                element.classList.add("is-toggled");
+            }
+        }
+        
+    </script>
+</body>
+</html>
