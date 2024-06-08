@@ -1,0 +1,111 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .calc-container {
+            color: grey;
+            width: 216px;
+            background-color: black;
+            border-radius: 16px;
+            padding-top: 45px;
+            padding-bottom: 24px;
+            font-family: Arial;
+            font-size: 22px;
+        }
+        .display{
+            color: white;
+            font-size: 46px;
+            padding: 0px;
+            margin-top: -40px;
+            margin-bottom: -40px;
+            margin-right: 20px;
+            text-align: right;
+        }
+        .row {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            /*background-color: pink;*/
+        }
+        .integer, .zero, .operation {
+            text-align: center;
+            justify-content: center;
+            background-color: rgb(88,88,88);
+            color: white;
+            border-radius: 100%;
+            width: 40px;
+            height: 40px;
+            margin: 4px;
+            cursor: pointer;
+        }
+        .zero {
+            width: 87px;
+            border-radius: 40px;
+        }
+        .operation {
+            background-color: orange;
+        }
+        .integer:hover, .zero:hover, .operation:hover {
+            opacity: 72%;
+        }
+        p {
+            margin-top: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="calc-container">
+        <div>
+            <div class="display">
+                <p class="js-calculation">0</p>
+            </div>
+        </div>
+        
+        <div class="row">
+          <div id="a7" class="integer"><p>7</p></div>
+          <div id="a8" class="integer"><p>8</p></div>
+          <div id="a9" class="integer"><p>9</p></div>
+          <div id="ax" class="operation"><p>x</p></div>
+        </div>
+        <div class="row">
+          <div id="a4" class="integer"><p>4</p></div>
+          <div id="a5" class="integer"><p>5</p></div>
+          <div id="a6" class="integer"><p>6</p></div>
+          <div id="a-" class="operation"><p>-</p></div>
+        </div>
+        <div class="row">
+          <div onclick=Calculate(1) id="a1" class="integer"><p>1</p></div>
+          <div id="a2" class="integer"><p>2</p></div>
+          <div id="a3" class="integer"><p>3</p></div>
+          <div id="a+" class="operation"><p>+</p></div>
+        </div>
+        <div class="row">
+          <div id="0" class="zero"><p>0</p></div>
+          <div id="." class="integer"><p>.</p></div>
+          <div id="=" class="operation"><p>=</p></div>
+        </div>  
+      </div>
+
+      <script>
+        document.querySelector('#a1').onclick = display1
+        document.querySelector('#a2').onclick = display2
+
+        function display1() {  document.querySelector('.display').style.backgroundColor = 'lightblue';
+            }
+        function display2() {  document.querySelector('.display').style.backgroundColor = 'lightpink';
+            }
+
+        function Calculate(x) {
+            }
+
+      </script>
+</body>
+</html>

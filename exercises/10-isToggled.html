@@ -12,15 +12,13 @@
     
 </head>
 <body>
-    <button class="js1 is-toggled" onclick="toggled('.js1');">Gaming</button>
-    <button class="js2 is-toggled" onclick="toggled('.js2');">Music</button>
-    <button class="js3 is-toggled" onclick="toggled('.js3');">Tech</button>
+    <button class="js1" onclick="toggled('.js1');">Gaming</button>
+    <button class="js2" onclick="toggled('.js2');">Music</button>
+    <button class="js3" onclick="toggled('.js3');">Tech</button>
     <script>
         function toggled(n){
             
             let element = document.querySelector(n);
-
-            
             
             if(element.classList.contains("is-toggled")){
                 element.classList.remove("is-toggled");
