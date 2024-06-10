@@ -1,0 +1,84 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 11 Exercises</title>
+</head>
+<body>
+    <script>
+        //11a.Create an array of numbers & modify last number
+        const nums = [10, 20, 30];
+        console.log(nums);
+        nums[nums.length-1] = 99;
+        console.log(nums);
+
+        //11b.Create a function that takes an array and returns the last value
+        function lastNumber(a) {
+            let a_last = a[a.length - 1];
+            console.log(a_last); 
+        }
+        lastNumber(nums);//prints 99
+
+        //11c.Create function that swaps first and last number
+        function swap(b){
+            let first = b[0];
+            let last = b[b.length - 1];
+
+            b[0] = last;
+            b[b.length - 1] = first;
+            console.log(b);
+        }
+        swap(nums); //[10, 20, 99] -> [99, 20, 10]
+
+        //11d.Create loop counting by 2s
+        function CountbyTwos(){
+            let c = [];
+            for(let i = 0; i <= 10; i+=2){
+                c.push(i);
+            }
+            return c;
+        }
+        console.log(CountbyTwos());
+
+        //11e.Create loop that count downs 5 to 0
+        function CountDown(){
+            let e = [];
+            for(let i = 5; i >= 0; i--){
+                e.push(i);
+            }
+            return e;
+        }
+        console.log(CountDown());
+
+        //11f.Create a function that takes in two arrays and adds them together
+        function addArrays(f,g){
+            let h = [];
+            let result = 0;
+            for(let i = 0; i < f.length; i++){
+                result = f[i]+g[i];
+                h.push(result);
+            }
+            return h;
+        }
+        console.log(addArrays([1,1,2],[1,1,3]));//returns [2,2,5]
+
+        //11l.Return min and max of an array 
+        function minMax(k){
+            let min = 1000000;
+            let max = 0;
+            for(let i = 0; i < k.length; i++){
+                //search for min and max
+                if(k[i] < min){
+                    min = k[i];
+                }
+                if(k[i] > max){
+                    max = k[i];
+                }
+                console.log("min: " + min + " max: " + max);
+            }
+        }
+        minMax([2,3,4,5,7,9]);
+        
+    </script>
+</body>
+</html>
